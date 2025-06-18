@@ -54,10 +54,10 @@ const Index = () => {
               </h1>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-gray-700 hover:text-red-500 transition-colors font-medium">Home</a>
-              <a href="#" className="text-gray-700 hover:text-red-500 transition-colors font-medium">Videos</a>
-              <a href="#" className="text-gray-700 hover:text-red-500 transition-colors font-medium">About</a>
-              <a href="#" className="text-gray-700 hover:text-red-500 transition-colors font-medium">Contact</a>
+              <a href="/" className="text-red-500 font-medium">Home</a>
+              <a href="/videos" className="text-gray-700 hover:text-red-500 transition-colors font-medium">Videos</a>
+              <a href="/about" className="text-gray-700 hover:text-red-500 transition-colors font-medium">About</a>
+              <a href="/contact" className="text-gray-700 hover:text-red-500 transition-colors font-medium">Contact</a>
             </nav>
             <Button className="bg-red-500 hover:bg-red-600 text-white">
               Subscribe
@@ -128,9 +128,14 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Latest Videos
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               Check out my most recent vlogs and adventures
             </p>
+            <a href="/videos">
+              <Button variant="outline" className="border-red-500 text-red-500 hover:bg-red-50">
+                View All Videos
+              </Button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -213,10 +218,10 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Videos</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
+                <li><a href="/videos" className="hover:text-white transition-colors">Videos</a></li>
+                <li><a href="/about" className="hover:text-white transition-colors">About</a></li>
+                <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
