@@ -1,5 +1,6 @@
 
-import { Youtube, Mail, Instagram, Twitter, MessageCircle } from "lucide-react";
+import Navigation from "@/components/Navigation";
+import { Mail, Instagram, Twitter, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
@@ -32,30 +33,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center">
-                <Youtube className="w-6 h-6 text-white" />
-              </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
-                VlogLife
-              </h1>
-            </div>
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-gray-700 hover:text-red-500 transition-colors font-medium">Home</a>
-              <a href="/videos" className="text-gray-700 hover:text-red-500 transition-colors font-medium">Videos</a>
-              <a href="/about" className="text-gray-700 hover:text-red-500 transition-colors font-medium">About</a>
-              <a href="/contact" className="text-red-500 font-medium">Contact</a>
-            </nav>
-            <Button className="bg-red-500 hover:bg-red-600 text-white">
-              Subscribe
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Page Header */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -159,15 +137,6 @@ const Contact = () => {
                       <div>
                         <p className="font-medium text-gray-900">Email</p>
                         <p className="text-gray-600">sarah@vloglife.com</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                        <Youtube className="w-6 h-6 text-red-500" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-900">YouTube</p>
-                        <p className="text-gray-600">@VlogLifeSarah</p>
                       </div>
                     </div>
                   </div>

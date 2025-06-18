@@ -2,6 +2,8 @@
 import { Play, Youtube, Users, Heart, MessageCircle, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   const featuredVideos = [
@@ -41,30 +43,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center">
-                <Youtube className="w-6 h-6 text-white" />
-              </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
-                VlogLife
-              </h1>
-            </div>
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-red-500 font-medium">Home</a>
-              <a href="/videos" className="text-gray-700 hover:text-red-500 transition-colors font-medium">Videos</a>
-              <a href="/about" className="text-gray-700 hover:text-red-500 transition-colors font-medium">About</a>
-              <a href="/contact" className="text-gray-700 hover:text-red-500 transition-colors font-medium">Contact</a>
-            </nav>
-            <Button className="bg-red-500 hover:bg-red-600 text-white">
-              Subscribe
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -131,11 +110,11 @@ const Index = () => {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               Check out my most recent vlogs and adventures
             </p>
-            <a href="/videos">
+            <Link to="/videos">
               <Button variant="outline" className="border-red-500 text-red-500 hover:bg-red-50">
                 View All Videos
               </Button>
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -218,10 +197,10 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="/videos" className="hover:text-white transition-colors">Videos</a></li>
-                <li><a href="/about" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+                <li><Link to="/videos" className="hover:text-white transition-colors">Videos</Link></li>
+                <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
+                <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
             <div>
